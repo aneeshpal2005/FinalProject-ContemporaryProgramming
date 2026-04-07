@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FinalProject_ContemporaryProgramming.Migrations
 {
     [DbContext(typeof(DefaultContext))]
-    [Migration("20260402140805_Initial")]
+    [Migration("20260407140807_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -68,6 +68,53 @@ namespace FinalProject_ContemporaryProgramming.Migrations
                             Description = "Exploring new places and cultures for leisure.",
                             HobbiesId = 3,
                             Name = "Traveling"
+                        });
+                });
+
+            modelBuilder.Entity("FinalProject_ContemporaryProgramming.Models.TeamMember", b =>
+                {
+                    b.Property<int>("TeamMemberId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TeamMemberId"));
+
+                    b.Property<string>("TeamMemberBirthdate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TeamMemberName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TeamMemberProgram")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TeamMemberYear")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("TeamMemberId");
+
+                    b.ToTable("TeamMembers");
+
+                    b.HasData(
+                        new
+                        {
+                            TeamMemberId = 1,
+                            TeamMemberBirthdate = "2005-1-1",
+                            TeamMemberName = "Aneesh Palande",
+                            TeamMemberProgram = "Information Technology",
+                            TeamMemberYear = "Pre-Junior"
+                        },
+                        new
+                        {
+                            TeamMemberId = 2,
+                            TeamMemberBirthdate = "2005-1-1",
+                            TeamMemberName = "Alex Lauffenberger",
+                            TeamMemberProgram = "CyberSecurity",
+                            TeamMemberYear = "Pre-Junior"
                         });
                 });
 #pragma warning restore 612, 618
