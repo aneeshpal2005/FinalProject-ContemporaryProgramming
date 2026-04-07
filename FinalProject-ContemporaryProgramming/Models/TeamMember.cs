@@ -8,7 +8,7 @@
         public string TeamMemberProgram { get; set; }
         public string TeamMemberYear { get; set; }
 
-        // dotnet-ef migration add TeamMember
-        // to add the 
+        // dotnet-ef migrations add TeamMember
+        // add this model to the database, then update the database
     }
 }

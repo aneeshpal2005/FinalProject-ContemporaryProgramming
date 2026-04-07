@@ -1,7 +1,7 @@
 using FinalProject_ContemporaryProgramming;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Finalproj_Final.Controllers
+namespace FinalProject_ContemporaryProgramming.Controllers
 {
     [ApiController]
     [Route("[controller]")]

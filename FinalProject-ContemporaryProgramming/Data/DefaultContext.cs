@@ -14,7 +14,7 @@ namespace FinalProject_ContemporaryProgramming.Data
 
         public DbSet<Hobbies> Hobbies { get; set; }
 
-        public DbSet<TeamMember> TeamMembers { get; set; }
+        public DbSet<TeamMember> TeamMember { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -28,8 +28,6 @@ namespace FinalProject_ContemporaryProgramming.Data
                 new TeamMember { TeamMemberId = 2, TeamMemberBirthdate = "2005-1-1", TeamMemberName = "Alex Lauffenberger", TeamMemberProgram = "CyberSecurity", TeamMemberYear="Pre-Junior" }
             );
         }
-
-        
     }
 
 }
