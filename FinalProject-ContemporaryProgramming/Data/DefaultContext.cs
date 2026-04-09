@@ -14,7 +14,7 @@ namespace FinalProject_ContemporaryProgramming.Data
 
         public DbSet<Hobbies> Hobbies { get; set; }
 
-        public DbSet<TeamMember> TeamMember { get; set; }
+        public DbSet<TeamMember> TeamMembers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
