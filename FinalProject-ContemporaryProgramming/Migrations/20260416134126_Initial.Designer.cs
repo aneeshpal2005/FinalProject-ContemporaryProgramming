@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FinalProject_ContemporaryProgramming.Migrations
 {
     [DbContext(typeof(DefaultContext))]
-    [Migration("20260407140807_Initial")]
+    [Migration("20260416134126_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -105,7 +105,7 @@ namespace FinalProject_ContemporaryProgramming.Migrations
                             TeamMemberId = 1,
                             TeamMemberBirthdate = "2005-1-1",
                             TeamMemberName = "Aneesh Palande",
-                            TeamMemberProgram = "Information Technology",
+                            TeamMemberProgram = "Game Development & Simulation",
                             TeamMemberYear = "Pre-Junior"
                         },
                         new

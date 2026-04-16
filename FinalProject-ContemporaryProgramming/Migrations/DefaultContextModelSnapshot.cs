@@ -102,7 +102,7 @@ namespace FinalProject_ContemporaryProgramming.Migrations
                             TeamMemberId = 1,
                             TeamMemberBirthdate = "2005-1-1",
                             TeamMemberName = "Aneesh Palande",
-                            TeamMemberProgram = "Information Technology",
+                            TeamMemberProgram = "Game Development & Simulation",
                             TeamMemberYear = "Pre-Junior"
                         },
                         new

@@ -14,7 +14,7 @@ namespace FinalProject_ContemporaryProgramming.Data
 
         public DbSet<Hobbies> Hobbies { get; set; }
 
-        public DbSet<TeamMember> TeamMember { get; set; }
+        public DbSet<TeamMember> TeamMembers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -24,7 +24,7 @@ namespace FinalProject_ContemporaryProgramming.Data
                 new Hobbies { Id = 3, Name = "Traveling", Description = "Exploring new places and cultures for leisure.", HobbiesId = 3 }
             );
             modelBuilder.Entity<TeamMember>().HasData(
-                new TeamMember { TeamMemberId = 1, TeamMemberBirthdate = "2005-1-1", TeamMemberName = "Aneesh Palande", TeamMemberProgram = "Information Technology", TeamMemberYear = "Pre-Junior"},
+                new TeamMember { TeamMemberId = 1, TeamMemberBirthdate = "2005-1-1", TeamMemberName = "Aneesh Palande", TeamMemberProgram = "Game Development & Simulation", TeamMemberYear = "Pre-Junior"},
                 new TeamMember { TeamMemberId = 2, TeamMemberBirthdate = "2005-1-1", TeamMemberName = "Alex Lauffenberger", TeamMemberProgram = "CyberSecurity", TeamMemberYear="Pre-Junior" }
             );
         }
