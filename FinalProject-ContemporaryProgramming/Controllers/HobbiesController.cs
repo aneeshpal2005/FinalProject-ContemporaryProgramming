@@ -18,6 +18,59 @@ namespace FinalProject_ContemporaryProgramming.Controllers
             _context = context;
         }
 
+        [HttpPut]
+        public IActionResult Update(int? id, [FromBody] Hobbies updatedHobby)
+        {
+            if (id == null || id == 0)
+            {
+                return BadRequest("Hobby ID is required");
+            }
+
+            var hobby = _context.Hobbies.Find(id);
+            if (hobby == null)
+            {
+                return NotFound("Hobby not found");
+            }
+
+            hobby.Name = updatedHobby.Name;
+            hobby.Description = updatedHobby.Description;
+            hobby.HobbiesId = updatedHobby.HobbiesId;
+
+            _context.Hobbies.Update(hobby);
+            _context.SaveChanges();
+
+            return NoContent();
+        }
+
+        [HttpDelete]
+        public IActionResult Delete(int? id)
+        {
+            try
+            {
+                if (id == null || id == 0)
+                {
+                    return BadRequest("Hobby ID is required");
+                }
+
+                var hobby = _context.Hobbies.Find(id);
+                if (hobby == null)
+                {
+                    return NotFound("Hobby not found");
+                }
+
+                _context.Hobbies.Remove(hobby);
+                _context.SaveChanges();
+
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while deleting hobby");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+
+
         [HttpGet(Name = "GetHobbies")]
         [Route("/")]
         public IActionResult Get()
