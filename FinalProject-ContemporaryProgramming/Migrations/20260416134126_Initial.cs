@@ -58,7 +58,7 @@ namespace FinalProject_ContemporaryProgramming.Migrations
                 columns: new[] { "TeamMemberId", "TeamMemberBirthdate", "TeamMemberName", "TeamMemberProgram", "TeamMemberYear" },
                 values: new object[,]
                 {
-                    { 1, "2005-1-1", "Aneesh Palande", "Information Technology", "Pre-Junior" },
+                    { 1, "2005-1-1", "Aneesh Palande", "Game Development & Simulation", "Pre-Junior" },
                     { 2, "2005-1-1", "Alex Lauffenberger", "CyberSecurity", "Pre-Junior" }
                 });
         }
