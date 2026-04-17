@@ -18,6 +18,20 @@ namespace FinalProject_ContemporaryProgramming.Controllers
             _context = context;
         }
 
+
+        [HttpPost]
+        public IActionResult Create([FromBody] Hobbies newHobby)
+        {
+            if (newHobby == null)
+            {
+                return BadRequest("Hobby data is required");
+            }
+            _context.Hobbies.Add(newHobby);
+            _context.SaveChanges();
+            return CreatedAtRoute("GetHobbies", new { id = newHobby.Id }, newHobby);
+        }
+
+
         [HttpPut]
         public IActionResult Update(int? id, [FromBody] Hobbies updatedHobby)
         {
