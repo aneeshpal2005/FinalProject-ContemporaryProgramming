@@ -16,6 +16,8 @@ namespace FinalProject_ContemporaryProgramming.Data
 
         public DbSet<TeamMember> TeamMembers { get; set; }
 
+        public DbSet<ChipotleMenu> ChipotleMenus { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Hobbies>().HasData(
@@ -27,6 +29,11 @@ namespace FinalProject_ContemporaryProgramming.Data
                 new TeamMember { TeamMemberId = 1, TeamMemberBirthdate = "2005-1-1", TeamMemberName = "Aneesh Palande", TeamMemberProgram = "Game Development & Simulation", TeamMemberYear = "Pre-Junior"},
                 new TeamMember { TeamMemberId = 2, TeamMemberBirthdate = "2005-1-1", TeamMemberName = "Alex Lauffenberger", TeamMemberProgram = "CyberSecurity", TeamMemberYear="Pre-Junior" }
             );
+            modelBuilder.Entity<ChipotleMenu>().HasData(
+                new ChipotleMenu { ItemId = 1, ItemName = "Sour Cream", ItemType = "Dairy", Description = "Box of Sour Cream Bags (8 per box)", ItemCost = 32.99 }
+                new ChipotleMenu { ItemId = 2, ItemName = "Tortillas", ItemType = "Misc", Description = "Box of Tortillas (12 per box)", ItemCost = 20.99 }
+            );
+            
         }
     }
 
