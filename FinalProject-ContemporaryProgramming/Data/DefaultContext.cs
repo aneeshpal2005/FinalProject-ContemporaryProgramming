@@ -18,6 +18,8 @@ namespace FinalProject_ContemporaryProgramming.Data
 
         public DbSet<ChipotleMenu> ChipotleMenus { get; set; }
 
+        public DbSet<MicrosoftServices> MicrosoftServices { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Hobbies>().HasData(
@@ -33,7 +35,11 @@ namespace FinalProject_ContemporaryProgramming.Data
                 new ChipotleMenu { ItemId = 1, ItemName = "Sour Cream", ItemType = "Dairy", Description = "Box of Sour Cream Bags (8 per box)", ItemCost = 32.99 },
                 new ChipotleMenu { ItemId = 2, ItemName = "Tortillas", ItemType = "Misc", Description = "Box of Tortillas (12 per box)", ItemCost = 20.99 }
             );
-            
+            modelBuilder.Entity<MicrosoftServices>().HasData(
+                new MicrosoftServices { ServiceId = 1, ServiceName = "Xbox Game Pass", ServiceDescription = "Access to a wide range of games for a monthly subscription.", ServiceCategory = "Gaming", SubscriptionCost = 9 },
+                new MicrosoftServices { ServiceId = 2, ServiceName = "Microsoft 365", ServiceDescription = "A suite of productivity tools including Word, Excel, and PowerPoint.", ServiceCategory = "Productivity", SubscriptionCost = 12 }
+            );
+
         }
     }
 
